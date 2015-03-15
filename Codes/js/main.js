@@ -51,7 +51,7 @@ var Script = function () {
     $('.fa-bars').click(function () {
         if ($('#sidebar > ul').is(":visible") === true) {
             $('#main-content').css({
-                'margin-left': '0px'
+                'margin-left': '0'
             });
             $('#sidebar').css({
                 'margin-left': '-210px'

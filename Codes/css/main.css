@@ -39,6 +39,7 @@ a, a:hover, a:focus {
 #container {
     width: 100%;
     height: 100%;
+    padding-left: 0;
 }
 
 /*Helpers*/
@@ -174,7 +175,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 
-/*sidebar navigation================================================
+/*SIDEBAR NAVIGATION================================================
 ====================================================================*/
 
 #sidebar {
@@ -318,7 +319,7 @@ ul.sidebar-menu li a i {
 }
 
 .sidebar-closed #main-content {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .sidebar-closed #sidebar {
@@ -335,7 +336,7 @@ ul.sidebar-menu li a i {
 .wrapper {
     display: inline-block;
     margin-top: 60px;
-    padding: 0;
+    padding: 0px;
     width: 100%;
     height: 100%;
 }
@@ -352,56 +353,105 @@ iframe {
 }
 
 
-/*Catch the film PAGE==============================================
+/*CATCH THE FILM PAGE==============================================
 ============================================================*/
 
-.col-md-3 {
+.container, .row {
+    clear: none;
+}
+
+
+.clearfix:after, .dl-horizontal dd:after, 
+.container:after, .container-fluid:after, 
+.row:after, .form-horizontal .form-group:after, 
+.btn-toolbar:after, .btn-group-vertical>.btn-group:after, 
+.nav:after, .navbar:after, .navbar-header:after, .navbar-collapse:after, 
+.pager:after, .panel-body:after, .modal-footer:after {
+    clear: none;
+}
+
+
+
+#img_container {
+    padding-left: 0px;
+    clear: none;
+}
+.col-md-6 .catch_img {
     margin-left: 0;
+    padding-left: 0;
+    clear: none;
 }
 
-#locations p {
+.catch_img {
+    float: left;
+    max-width: 100%;
+    display: inline;
+    clear: none;
+}
+
+.catch-film-time{
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+
+#locations .col-lg-6 {
+    float: right;
+    width: 100%;
+    display: inline;
+    clear: none;
+
+}
+
+#locations {
     color: black;
-    margin-left: 70%;
-    background-color: lightgray;
-    width: 250px;
+    margin-left: 50%;
+    width: 400px;
+    background-color: lightgray; 
+    border: 3px;
+    padding: 10px;
+    clear: none;
 }
 
 
-/*Background PAGE==============================================
+/*BACKGROUND PAGE==============================================
 ============================================================*/
+.background_img {
+    width: 100%;
+    height: 100%;
+}
 
-.col-lg-6 p {
+#intro-text p {
     color: black;
     bottom: 50px;
+    width: 500px;
 }
 
-
-.col-lg-6 a {
+#intro-text a {
     color: black;
     text-decoration: underline;
 }
 
 #introduction {
-
-    margin-left: 10%;
     position: absolute;
     bottom: 70px;
+    left: 20%;
     width: 45%;
     background-color: gray;
     opacity: 0.3;
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
 
 }
 
-.background_img {
-    width: 100%;
-    height: 100%;
 
-}
-
-/*The crew film PAGE==============================================
+/*THE CREW PAGE==============================================
 ============================================================*/
+.crew {
+    position: absolute;
+    right: 20%;
+    top: 50px;
+}
 
 .col-sm-3 p {
     width: 300px;
@@ -432,4 +482,20 @@ iframe {
     padding-left: 50%;
 }
 
+/*REVIEWS PAGE=======================================================
+=====================================================================*/
+.reviews {
+    position: absolute;
+    float: right;
+    top: 60px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: black;
+    opacity: 0.6;
+    font-weight: bolder;
+}
 
+.reviews > p {
+    font-weight: bold;
+    color: gray;
+} 
